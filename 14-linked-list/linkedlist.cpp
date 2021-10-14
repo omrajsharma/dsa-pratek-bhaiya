@@ -52,6 +52,11 @@ int main(){
     cout << "print pop back list" << endl;
     l.pop_back();
     printList(l.head);
+
+    // reverse linked list
+    cout << "printing reversing list" << endl;
+    l.reverseList();
+    printList(l.head);
     
 
 

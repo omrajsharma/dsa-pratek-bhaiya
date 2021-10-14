@@ -160,6 +160,22 @@ public:
         tempBack->next = NULL;
     }
 
+    // REVERSE LIST
+    void reverseList(){
+        Node* prev = NULL;
+        Node* curr = head;
+        Node* temp = curr->next;
+
+        while(curr->next != NULL){
+            temp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        curr->next = prev;
+        head = curr;
+    }
+
     // DELETING NODE
     void deleteNode(int key){
         if(head->data==key){
